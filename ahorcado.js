@@ -82,7 +82,7 @@ function iniciar(){
 	var bI = document.getElementById("btnInicio");
 	var canvas = document.getElementById("c");
 
-	bI.disabled = true;
+	bI.disabled = true;		//se desactiva activael boton
 	//crea el ancho alto del canvas
 	canvas.width = 500;
 	canvas.height = 400;
