@@ -44,6 +44,7 @@ Ahorcado.prototype.dibujar = function(i){
 				dibujalo.drawImage(cuerpo,210,330,20,20);
 			}
 			if(this.intentos > 2){
+				document.getElementById("btnInicio").disabled = false;	//se activa con la palabra minima tres letras
 				cuerpo.src = i;
 				cuerpo.onload = function(){
 					dibujalo.drawImage(cuerpo,208,252,20,80);
@@ -80,6 +81,8 @@ function iniciar(){
 	var b = document.getElementById("boton");
 	var bI = document.getElementById("btnInicio");
 	var canvas = document.getElementById("c");
+
+	bI.disabled = true;
 	//crea el ancho alto del canvas
 	canvas.width = 500;
 	canvas.height = 400;
