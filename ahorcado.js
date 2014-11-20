@@ -78,6 +78,7 @@ function iniciar(){
 	//trae el canvas del html (getElementById es el metodo de la funcion JS document)
 	l = document.getElementById("letra");
 	var b = document.getElementById("boton");
+	var bI = document.getElementById("btnInicio");
 	var canvas = document.getElementById("c");
 	//crea el ancho alto del canvas
 	canvas.width = 500;
@@ -90,7 +91,12 @@ function iniciar(){
 
 
 
-	var dict = ["marijo", "anavaleria","rodrigo", "alvaro","daniela","terumi","isabela","marina","luis","gala","cama","regis","gaby","enrique","beto","yas","glo"];
+	var dict = ["joaca","marijo", "anavaleria","rodrigo","alvaro",
+	"daniela","terumi","isabela","marina","luis","gala","cama","regis",
+	"gaby","enrique","beto","yas","glo","santi","frida","dani","trabadulce",
+	"bea","villano","montse","karendel","stefhani","corin","carmen",
+	"pablo","cami","grillo","gimi","hector","quebarbara","oscar","sofi",
+	"sebastian","josejuan"];
 
 	var indice = 0;
 	var min = 0;
@@ -111,9 +117,13 @@ function iniciar(){
 	espacio = new Array(palabra.length);
 	//funcion al click del boton
 	b.addEventListener("click", agregarLetra);
+	bI.addEventListener("click", reinicia);
 	//espacio[0] = "t";
 	//espacio[3] = "a";
 	mostrarPista(espacio);
+}
+function reinicia(){
+	iniciar();
 }
 function agregarLetra(){
 	var letra = l.value;
